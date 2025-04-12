@@ -1,5 +1,5 @@
 Сервіс контактів
-==================
+================
 
 .. automodule:: services.contacts
    :members:

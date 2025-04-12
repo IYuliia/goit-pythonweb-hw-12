@@ -1,5 +1,5 @@
 Моделі
-==================
+======
 
 .. automodule:: entity.models
    :members:

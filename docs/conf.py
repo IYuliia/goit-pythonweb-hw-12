@@ -12,7 +12,7 @@ from pathlib import Path
 
 # Додаємо шлях до src директорії
 src_path = Path(__file__).parent.parent / 'src'
-sys.path.insert(0, str(src_path))
+sys.path.insert(0, os.path.abspath('../src'))
 
 # Встановлюємо змінні середовища для імпорту
 os.environ['CLD_NAME'] = 'test'

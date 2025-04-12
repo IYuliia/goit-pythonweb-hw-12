@@ -1,8 +1,21 @@
 from datetime import date
+from datetime import datetime
+from enum import Enum
 from typing import Optional
-from sqlalchemy import String, Date
+from sqlalchemy import (
+    String,
+    Date,
+    DateTime,
+    func,
+    ForeignKey,
+    Text,
+    Boolean,
+    Enum as SqlEnum,
+)
 from sqlalchemy.orm import Mapped, mapped_column
-from sqlalchemy.orm import DeclarativeBase
+from sqlalchemy.orm import DeclarativeBase, relationship
+
+
 
 
 class Base(DeclarativeBase):

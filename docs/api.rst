@@ -1,5 +1,5 @@
 API endpoints
-==================
+=============
 
 .. toctree::
    :maxdepth: 2
