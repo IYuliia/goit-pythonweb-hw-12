@@ -1,39 +1,46 @@
 
-### Technical Task Description
+### Technical Description of the Task
 
-1. **Authentication Mechanism**  
-   Implement an authentication mechanism in the application.
+1. **Creating Documentation Using Sphinx**: Create documentation for your application using Sphinx. To do this, add docstrings to the necessary functions and methods of classes in the main modules.
+  
+2. **Unit Testing**: Cover your application’s repository modules with unit tests.
 
-2. **Authorization with JWT Tokens**  
-   Implement authorization using JWT tokens so that all contact operations are performed only by registered users.
+3. **Integration Testing**: Cover the routes of your application with integration tests using the pytest framework.
 
-3. **User Access Control**  
-   The user should only have access to their own contact operations.
+4. **Test Coverage Above 75%**: Ensure that your application is covered by tests for over 75%. Use the pytest-cov package for control.
 
-4. **Email Verification**  
-   Implement an email verification mechanism for registered users.
+5. **Redis Caching Implementation**: Implement caching using the Redis database. Cache the current user during authentication so that the `get_current_user` function retrieves the user from the cache and does not query the database every time.
 
-5. **Limit Requests**  
-   Limit the number of requests to the `/me` route.
+6. **Password Reset Mechanism**: Implement a password reset mechanism for your REST API application.
 
-6. **Enable CORS**  
-   Enable CORS for your REST API.
-
-7. **User Avatar Update**  
-   Implement the ability to update the user's avatar (use Cloudinary service).
+7. **User Roles and Access**: Implement role-based access for users: "user" and "admin". Ensure that only administrators can change their default avatar.
 
 ---
 
-### General Requirements for the Homework Assignment
+### General Requirements for Completing the Homework
 
-- The requirements listed above are mandatory for evaluating the homework by the mentor. If any of the requirements are not met, the homework will be sent back to the student for revision without grading.
-- If you have any questions or are stuck at any step, feel free to contact the mentor via Slack.
-- When registering a user, if the user already exists with the same email, the server should return an HTTP 409 Conflict error.
-- The server should hash passwords and not store them in plain text in the database.
-- Upon successful user registration, the server should return HTTP status 201 Created along with the new user data.
-- For all POST operations (creating a new resource), the server should return status 201 Created.
-- During the POST operation, user authentication should occur, and the server should accept a request with user data (username and password) in the request body.
-- If the user does not exist or the password does not match, HTTP 401 Unauthorized error should be returned.
-- Authorization using JWT tokens should be implemented via the access token (`access_token`).
-- All environment variables should be stored in the `.env` file. No confidential data should be stored directly in the code.
-- Docker Compose should be used to run all services and databases in the application.
+1. **Code Documentation**:  
+   All major functions and methods of classes must have appropriate docstrings for generating documentation using Sphinx.
+
+2. **Testing**:  
+   Test modules should be organized according to the structure of your application.  
+   Use pytest to write unit and integration tests.  
+   Ensure that your application has test coverage of at least 75%. Use pytest-cov to check coverage.
+
+3. **Redis Caching**:  
+   Set up Redis as a caching service for your application.  
+   When implementing user caching, ensure the security and freshness of the data.
+
+4. **Password Reset**:  
+   Implement a secure password reset mechanism with confirmation via email or another method.
+
+5. **Role Management**:  
+   Implement a role system for users.  
+   Ensure access control checks for operations that are only available to administrators.
+
+6. **Confidential Data Storage**:  
+   All sensitive data and configurations should be stored in a `.env` file. Do not include sensitive data in the codebase.
+
+7. **Containerization**:  
+   Use Docker Compose to run all services and databases of your application.
+
